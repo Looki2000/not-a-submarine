@@ -28,6 +28,12 @@ void loop() {
   {
     char text[32] = {0};
     radio.read(&text, sizeof(text));
-    Serial.println(text);
+
+    if (strlen(text) > 0){
+      Serial.print("==");
+      Serial.print(text);
+      Serial.println("==");
+    }
+
   }
 }
